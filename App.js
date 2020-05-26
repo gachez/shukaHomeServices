@@ -1,6 +1,9 @@
 import React from 'react';
-import { Platform, StyleSheet, Text, View, ScrollView, Dimensions, ImageBackground } from 'react-native';
+import { Platform, StyleSheet, Text, View, ScrollView, Dimensions, ImageBackground, Image } from 'react-native';
 import hair from './assets/hair.jpg';
+import badhair from './assets/badhair.jpg'; 
+import hairday from './assets/hairday.jpg';
+import logo from './assets/splash.jpeg';
 
 let deviceWidth = Dimensions.get('window').width;
 
@@ -8,8 +11,8 @@ export default function App() {
   return (
     <View style={styles.container}>
     <ScrollView horizontal={true} pagingEnabled={true} showsHorizontalScrollIndicator={false}>
-    <ImageBackground source={hair} style={styles.firstView}>
-       <Text style={styles.headerText}>First View</Text>
+    <ImageBackground source={badhair} style={styles.firstView}>
+       <Text style={styles.headerText}><Text style={{color: 'red', fontWeight: 'bold', fontSize: 48}}>Bad hairday?</Text> Don't Stress. We've got you covered.</Text>
         <View style={styles.navigationDots}>
           <View style={styles.navigationCircles}></View>
           <View style={styles.navigationCircles}></View>
@@ -18,8 +21,8 @@ export default function App() {
         </View>
      </ImageBackground>
 
-     <ImageBackground source={hair} style={styles.secondView}>
-      <Text style={styles.headerText}>Second View</Text>
+     <ImageBackground source={hairday} style={styles.secondView}>
+      <Text style={styles.headerText}>Get skilled professionals to make your hair <Text>glow</Text> All at the click of a button</Text>
         <View style={styles.navigationDots}>
         <View style={styles.navigationCircles}></View>
           <View style={styles.navigationCircles}></View>
@@ -64,6 +67,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     textAlign: "center",
     margin: 10,
+    top: '50%',
     color: 'white',
     fontWeight: "bold"
   },
@@ -101,7 +105,7 @@ const styles = StyleSheet.create({
     height: 80,
     position: 'absolute',
     bottom: 0,
-    left: '40%'
+    left: '35%'
   }
   ,
   navigationCircles: {
